@@ -1,9 +1,9 @@
 import {createStore} from 'redux';
 import RootReducer from './reducer/IndexReducers'
 // import LoginReducer from './reducer/LoginReducer';
-import initialState from './reducer/IntialState';
+import InitialState from './reducer/IntialState';
 function configureStore(){
-    return createStore(RootReducer,initialState)
+    return createStore(RootReducer,InitialState)
 }
 
 export default configureStore;

@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/ActionTypes';
-import initialState from './IntialState';
-export default function LoginReducer(state = initialState,action){
+import InitialState from './IntialState';
+export default function LoginReducer(state = InitialState,action){
     switch(action.type){
         case actionTypes.LOGIN_SUCESS :  return {...state, token : action.token};//get a token from backend and set the username and token feild.
 

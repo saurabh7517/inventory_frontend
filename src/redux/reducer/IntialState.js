@@ -1,4 +1,4 @@
-export default  {
+let InitialState =   {
     token : null,
     username : null,
     filteredProducts: [] ,
@@ -23,3 +23,5 @@ export default  {
         }
     ]       
 }
+
+export default InitialState;
