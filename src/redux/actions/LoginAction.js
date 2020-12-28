@@ -22,7 +22,7 @@ function LoginFailed(){
 }
 
 export function validateLogin(userInfo){
-    if(userInfo.username === 'saurabh' && userInfo.password === 'omen'){
+    if(userInfo.username === 'saurabh' && userInfo.password === 'pass'){
 
         return LoginSuccess(userInfo.username);
     }else{
