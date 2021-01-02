@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import * as productActions from '../../redux/actions/ProductAction';
 import { connect } from 'react-redux';
 import CustomButton from '../common/button/CustomButton';
-
+import './cartList.css';
 class CartList extends React.Component {
     constructor(props) {
         super(props);
@@ -35,11 +35,11 @@ class CartList extends React.Component {
     }
 
     render() {
-        let count = 0;
+        // let count = 0;
         return (
-            <React.Fragment>
+            <div id='cart-content'>
                 <h3>CartList Page</h3> <br />
-                <table>
+                <table id='cart-table'>
                     <tr>
                         <th>Product Code</th>
                         <th>Product Name</th>
@@ -49,20 +49,20 @@ class CartList extends React.Component {
                         <th> Action</th>
                     </tr>
                     {this.props.cart.map((product) => {
-                        let { pCode, pName, pDescription, price,quantity } = { ...product };
+                        let { productCode,productName,productDescription,buyPrice,quantity } = { ...product };
                         return (
-                            <tr key={count}>
+                            <tr key={productCode}>
                                 <td>
-                                    {pCode}
+                                    {productCode}
                                 </td>
                                 <td>
-                                    {pName}
+                                    {productName}
                                 </td>
                                 <td>
-                                    {pDescription}
+                                    {productDescription}
                                 </td>
                                 <td>
-                                    {price}
+                                    {buyPrice}
                                 </td>
 
                                 <td>
@@ -79,13 +79,12 @@ class CartList extends React.Component {
                             </tr>
 
                         )
-                        // { count = count + 1 }
                     })}
 
 
                 </table>
 
-            </React.Fragment>
+            </div>
         )
     }
 }

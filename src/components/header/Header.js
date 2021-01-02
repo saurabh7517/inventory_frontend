@@ -6,6 +6,7 @@ import * as loginActions from '../../redux/actions/LoginAction';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 import * as routerPath from '../../router/Config';
+import shopping_cart from './shopping_cart.png';
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +18,7 @@ class Header extends React.Component {
 
     openCart(event) {
         event.preventDefault();
-        console.log('open cart clicked!!');
+        
         this.props.history.push(routerPath.CART_PATH);
 
     }
@@ -59,19 +60,20 @@ class Header extends React.Component {
             
             <NavLink exact strict to='/products'>Products</NavLink>
             
-            <CustomButton inputType='button' inputValue={cartLength} clickHandler={this.openCart} />
+            <CustomButton inputType='button' inputValue={cartLength + ' Cart'} clickHandler={this.openCart} />
             <CustomButton inputType='button' inputValue='Logout' clickHandler={this.logout} />
 
         </React.Fragment> : <NavLink exact strict to='/login'> Login </NavLink>
 
 
         return (
-            <React.Fragment>
+            <div id="nav">
+                <img src={shopping_cart} alt='shopping_cart'/>
                 <NavLink exact strict to='/'>Home</NavLink>
                 {login_user}
                 <NavLink exact strict to='/aboutus'> About Us</NavLink>
                 
-            </React.Fragment>
+            </div>
 
         )
     }

@@ -8,6 +8,7 @@ import MyAccount from './components/account/Account';
 import MyOrder from './components/myorder/MyOrder';
 import ProductList from './components/products/ProductList';
 import CartList from './components/cart/CartList';
+import Footer from './components/footer/Footer';
 import './App.css';
 import PrivateRoute from './components/secure/PrivateRoute';
 import * as routerPath from './router/Config';
@@ -25,6 +26,7 @@ function App(){
           <PrivateRoute customPath={routerPath.MYORDERS_PATH} customComp={MyOrder}/>
           {/* To Do - Design a cart */}
           <PrivateRoute customPath={routerPath.CART_PATH} customComp={CartList}/>
+      <Footer/>    
     </React.Fragment>
     
   )

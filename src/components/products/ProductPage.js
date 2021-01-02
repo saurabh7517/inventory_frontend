@@ -19,7 +19,8 @@ class ProductPage extends React.Component {
     render() {
 
         var self = this;
-        let {pCode,pName,pLine,pVendor,pDescription,price,msrp} = {...this.props.displayProduct};
+        let {productCode,productName,productLine,productVendor,productDescription,buyPrice,MSRP} = {...this.props.displayProduct};
+
 
         return (
             
@@ -28,13 +29,13 @@ class ProductPage extends React.Component {
                 Product Page<br/>
                 <span className="close" ref={(el) => { self._spanElement = el; }} onClick={this.trigger}>&times;</span><br/>
                 
-                            Product Code : {pCode}<br />
-                            Product Name : {pName}<br />
-                            Product Line : {pLine}<br />
-                            Product Vendor : {pVendor}<br />
-                            Description : {pDescription}<br />
-                            Price : {price}<br />
-                            MSRP : {msrp}<br />
+                            Product Code : {productCode}<br />
+                            Product Name : {productName}<br />
+                            Product Line : {productLine}<br />
+                            Product Vendor : {productVendor}<br />
+                            Description : {productDescription}<br />
+                            Price : {buyPrice}<br />
+                            MSRP : {MSRP}<br />
                                 {/* <CustomButton inputType='button' inputValue='Show Product' clickHandler={() => this.showProduct(product)} />
                                 <CustomButton inputType='button' inputValue='Add to Cart' clickHandler={() => this.addToCart(product)} /> */}
                 <div>

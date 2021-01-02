@@ -6,7 +6,7 @@ function ProductReducer(state=CartInitialState,action){
         
         
                                         
-        case actionTypes.PRODUCT_REMOVED : return {...state, cartProducts : state.cartProducts.filter((p) => p.pCode !== action.product.pCode)};
+        case actionTypes.PRODUCT_REMOVED : return {...state, cartProducts : state.cartProducts.filter((p) => p.productCode !== action.product.productCode)};
         case actionTypes.TOGGLE_MODAL : return {...state, modalStatus : action.modalStatus}
         
         default : return state; 

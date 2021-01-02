@@ -60,12 +60,12 @@ class Login extends React.Component{
     render(props){
         // var common = this.props.token=== 'saurabh' ? <div>Current User is : {this.props.token}</div> : <div>User not logged in</div>
         return(
-            <React.Fragment>
-                <CustomTextBox inputType="text" inputPlaceHolder="Enter your email as username" changeHandler={this.handleUserNameChange}/>
-                <CustomTextBox inputType="text" inputPlaceHolder="Enter your password" changeHandler={this.handlePasswordChange}/>
+            <div id='login'>
+                <CustomTextBox inputType="text" inputPlaceHolder="Enter Username" changeHandler={this.handleUserNameChange}/><br/>
+                <CustomTextBox inputType="text" inputPlaceHolder="Enter Password" changeHandler={this.handlePasswordChange}/><br/>
                 <CustomButton inputType="button" inputValue="Login" clickHandler={ this.clickEvent}/>
                 {/* {common} */}
-            </React.Fragment>
+            </div>
         )
     }
 }
