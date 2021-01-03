@@ -28,6 +28,7 @@ class ProductPage extends React.Component {
             <div className='modal-content'>
                 Product Page<br/>
                 <span className="close" ref={(el) => { self._spanElement = el; }} onClick={this.trigger}>&times;</span><br/>
+
                 
                             Product Code : {productCode}<br />
                             Product Name : {productName}<br />

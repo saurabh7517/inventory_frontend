@@ -46,10 +46,7 @@ class Header extends React.Component {
             <option value={routerPath.MYORDERS_PATH}>my orders</option>
         </select>
 
-        // let loggedInUser = <React.Fragment>
-        //     {dropdown}
-        //     <NavLink exact strict to='/products'>Products</NavLink>
-        // </React.Fragment>
+
         let cartLength = 0;
         this.props.cart.forEach(element => {
             cartLength = cartLength + element.quantity;
@@ -60,8 +57,9 @@ class Header extends React.Component {
             
             <NavLink exact strict to='/products'>Products</NavLink>
             
-            <CustomButton inputType='button' inputValue={cartLength + ' Cart'} clickHandler={this.openCart} />
-            <CustomButton inputType='button' inputValue='Logout' clickHandler={this.logout} />
+
+            <button type='button' value='Cart' className='btn btn-warning' onClick={this.openCart}>Cart <span className='badge bg-light text-dark'>{cartLength}</span></button>
+            <CustomButton inputType='button' classStyle='btn btn-danger' inputValue='Logout' clickHandler={this.logout} />
 
         </React.Fragment> : <NavLink exact strict to='/login'> Login </NavLink>
 

@@ -63,7 +63,7 @@ class Login extends React.Component{
             <div id='login'>
                 <CustomTextBox inputType="text" inputPlaceHolder="Enter Username" changeHandler={this.handleUserNameChange}/><br/>
                 <CustomTextBox inputType="text" inputPlaceHolder="Enter Password" changeHandler={this.handlePasswordChange}/><br/>
-                <CustomButton inputType="button" inputValue="Login" clickHandler={ this.clickEvent}/>
+                <CustomButton inputType="button" classStyle='btn btn-success' inputValue="Login" clickHandler={ this.clickEvent}/>
                 {/* {common} */}
             </div>
         )

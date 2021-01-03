@@ -43,22 +43,21 @@ class Product extends React.Component {
     render() {
 
 
-        // let product = this.props.detail;
         let {productCode,productName,productLine,productVendor,productDescription,buyPrice,MSRP} = {...this.props.detail};
         return (
             
-            <React.Fragment>
-                
-                Product Code : {productCode}<br />
-                            Product Name : {productName}<br />
+            <div className='card-body'>
+                <h5 className='card-title'>{productName}</h5>
+                <h6 className='card-subtitle text-muted'>{productCode}</h6>
+                <p className='card-text'></p>
                             Product Line : {productLine}<br />
                             Product Vendor : {productVendor}<br />
                             Description : {productDescription}<br />
                             Price : {buyPrice}<br />
                             MSRP : {MSRP}<br />
-                <CustomButton inputType='button' inputValue='Show Product' clickHandler={() => this.showProduct(this.props.detail)} />
-                <CustomButton inputType='button' inputValue='Add to Cart' clickHandler={() => this.addToCart(this.props.detail)} />
-            </React.Fragment>
+                <CustomButton inputType='button' classStyle='btn btn-warning' inputValue='Show Product' clickHandler={() => this.showProduct(this.props.detail)} />
+                <CustomButton inputType='button' classStyle='btn btn-primary' inputValue='Add to Cart' clickHandler={() => this.addToCart(this.props.detail)} />
+            </div>
         )
     }
 }

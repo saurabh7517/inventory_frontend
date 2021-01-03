@@ -41,16 +41,13 @@ class ProductList extends React.Component {
                 
 
                 <div id='products'>
-                    {/* <div id='product-content'> */}
-                {/* <h4>ProductList Page</h4> */}
                     {this.props.filterProducts.map((product) => {
                         return (
-                            <div key={product.productCode} id='card'>
+                            <div key={product.productCode} id='card' className='card'>
                                 <Product detail={product} displayModal={this.showModal} />
                             </div>
                         );
                     })}
-                    {/* </div> */}
                 </div>
             </div>
         )

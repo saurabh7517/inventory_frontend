@@ -10,6 +10,7 @@ import ProductList from './components/products/ProductList';
 import CartList from './components/cart/CartList';
 import Footer from './components/footer/Footer';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import PrivateRoute from './components/secure/PrivateRoute';
 import * as routerPath from './router/Config';
 

@@ -38,17 +38,22 @@
 
   }
 
-  #card{
+  /* #card{
     max-height: max-content;
-    /* overflow: hidden; */
     text-overflow: ellipsis;
     border-radius:10px;
     margin-top: 10px 5px 10px 10px;
     background-color: #57595d;
     color: aliceblue;
-    padding: 20px;
-    
-    
+    padding: 20px;   
+  } */
+
+  .card{
+    /* padding:30px; */
+    margin:0px 20px 20px 20px;
+  }
+  .btn{
+    margin:10px 10px 10px 0px;
   }
 
   #sidebar{
@@ -70,7 +75,7 @@
     overflow-y: scroll;
     grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
     grid-template-rows: (auto-fill, 1fr);
-    background-color: black;
+    /* background-color: black; */
     border-radius: 5px;
     grid-area: products;
     /* height: 100vh; */

@@ -66,13 +66,13 @@ class CartList extends React.Component {
                                 </td>
 
                                 <td>
-                                    <CustomButton inputType='button' inputValue='+' clickHandler={() => this.addQuantity(product)}/>
+                                    <CustomButton inputType='button' classStyle='btn btn-warning' inputValue='+' clickHandler={() => this.addQuantity(product)}/>
                                     {quantity}
-                                    <CustomButton inputType='button' inputValue='-' clickHandler={() => this.reduceQuantity(product)}/>
+                                    <CustomButton inputType='button' classStyle='btn btn-warning' inputValue='-' clickHandler={() => this.reduceQuantity(product)}/>
                                 </td>
                                 <td>
-                                    <CustomButton inputType='button' inputValue='Remove' clickHandler={() => this.remove(product)} />
-                                    <CustomButton inputType='button' inputValue='Checkout' clickHandler={this.checkout} />
+                                    <CustomButton inputType='button' classStyle='btn btn-danger' inputValue='Remove' clickHandler={() => this.remove(product)} />
+                                    <CustomButton inputType='button' classStyle='btn btn-primary' inputValue='Checkout' clickHandler={this.checkout} />
 
                                 </td>
 

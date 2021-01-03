@@ -60,7 +60,8 @@ body{
 }
 #cart-content{
   grid-area:main-content;
-  grid-row:2/3;  
+  grid-row:2/3; 
+  overflow-y: scroll; 
 }
 
 
